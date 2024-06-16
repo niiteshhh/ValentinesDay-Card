@@ -1,0 +1,118 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/bg1.jpg);
+}
+
+.valentines-day-card-back {
+  position: fixed;
+  width: 400px;
+  height: 300px;
+  background-color: #f5f1db;
+  overflow: hidden;
+  border: 10px solid #e297cf;
+  border-radius: 10px;
+}
+
+.valentines-day-card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-color: #f5f1db;
+  overflow: hidden;
+  border: 10px solid #e297cf;
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, .4);
+}
+
+.valentines-day-card:after {
+  content: "";
+  position: absolute;
+  background-color: #ffccd5;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 160px;
+  left: -40px;
+  box-shadow: 50px 20px #ffccd5, 120px 40px #ffccd5, 200px 15px #ffccd5, 260px 30px #ffccd5, 330px 30px #ffccd5, 380px 10px #ffccd5;
+}
+
+.clouds {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff0f3;
+  z-index: 5;
+  top: 210px;
+  left: -20px;
+  box-shadow: 55px 30px #fff0f3, 125px 10px #fff0f3, 175px 20px #fff0f3, 250px 10px #fff0f3, 320px 5px #fff0f3, 380px 10px #fff0f3;
+}
+
+.text {
+  position: absolute;
+  color: #b977a9;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  text-align: center;
+  width: 380px;
+  left: 10px;
+  z-index: 5;
+  top: 100px;
+  animation: up 1s ease forwards;
+  transition: .2s;
+}
+
+#message {
+  border: none;
+  background-color: #f5f1db;
+  height: 200px;
+  top: 30px;
+}
+
+.link-button {
+  position: relative;
+  left: 20px;
+  bottom: -260px;
+  border-radius: 10%;
+  border: none;
+  background-color: #e297cf;
+  height: 28px;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  cursor: pointer;
+  border: solid 1px #eec0e227;
+}
+
+#question {
+  display: none;
+}
+
+@keyframes up {
+
+  0%,
+  50% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0.85);
+  }
+}

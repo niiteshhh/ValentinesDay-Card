@@ -1,0 +1,167 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faddf5;
+}
+
+.container {
+  position: relative;
+}
+
+.valentines {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #e9aad9;
+}
+
+.envelope:before {
+  background-color: #d89fd0;
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 185px;
+  z-index: 0;
+  transform: rotate(180deg);
+  border-radius: 30px 0 0 0;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 43px;
+  width: 0px;
+  height: 121px;
+  rotate: 45deg;
+  border-radius: 30px 0 0 0;
+  background-color: #f5bde9;
+}
+
+.card {
+  position: absolute;
+  background-color: #f1ebc8;
+  width: 270px;
+  height: 0px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #3f0f52;
+  border-style: dotted;
+  width: 240px;
+  height: 140px;
+  left: 12px;
+  top: 12px;
+}
+
+.card-cover {
+  background-color: #faaaf3;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 300px;
+  height: 195px;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  text-align: center;
+  line-height: 30px;
+  top: 45px;
+  left: 82px;
+  color: #3f0f52;
+}
+
+.heart {
+  background-color: #e297cf;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 110px;
+  left: 120px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #e297cf;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f19fe6;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 300px solid #f89dda;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+  width: 0;
+  height: 0;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 250px;
+  animation: scale 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes up {
+
+  0%,
+  50% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
